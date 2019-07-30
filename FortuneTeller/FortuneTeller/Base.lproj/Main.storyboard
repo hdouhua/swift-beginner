@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FortuneTeller" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OldMan" translatesAutoresizingMaskIntoConstraints="NO" id="pBl-38-ptp">
+                                <rect key="frame" x="38" y="0.0" width="692" height="1024"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pBl-38-ptp" secondAttribute="height" multiplier="173:256" id="W7P-eI-I3C"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="h3X-6j-VPS">
+                                <rect key="frame" x="183" y="556" width="402" height="228"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h3X-6j-VPS" secondAttribute="height" multiplier="67:38" id="SGC-01-mko"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAn-WU-BpJ" userLabel="Help View">
+                                <rect key="frame" x="0.0" y="784" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Hwa-h9-vPU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUg-aa-mUd">
+                                <rect key="frame" x="205" y="851" width="358" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zUg-aa-mUd" secondAttribute="height" multiplier="76:17" id="o9c-lz-c3Z"/>
+                                </constraints>
+                                <state key="normal" image="Button"/>
+                                <state key="highlighted" image="ButtonPressed"/>
+                                <connections>
+                                    <action selector="changeFortune:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHb-4g-ckC"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="px7-kQ-elO" userLabel="Help View 2">
+                                <rect key="frame" x="528" y="939" width="240" height="85"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="dFT-la-MX7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.87450980392156863" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pBl-38-ptp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="3vX-PX-puj"/>
+                            <constraint firstAttribute="bottom" secondItem="mAn-WU-BpJ" secondAttribute="bottom" id="4A7-9A-P6N"/>
+                            <constraint firstItem="zUg-aa-mUd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8oz-Cr-Gco"/>
+                            <constraint firstItem="pBl-38-ptp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CJG-EO-7qS"/>
+                            <constraint firstItem="px7-kQ-elO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="85/1024" id="ICA-aI-aXl"/>
+                            <constraint firstItem="zUg-aa-mUd" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="80/1024" id="OIZ-Ca-NSy"/>
+                            <constraint firstItem="px7-kQ-elO" firstAttribute="firstBaseline" secondItem="zUg-aa-mUd" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="PWi-EF-lli"/>
+                            <constraint firstAttribute="bottom" secondItem="px7-kQ-elO" secondAttribute="bottom" id="UJE-2L-sVs"/>
+                            <constraint firstItem="h3X-6j-VPS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="228/1024" id="drY-pk-VTd"/>
+                            <constraint firstItem="mAn-WU-BpJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fdC-Uu-S9q"/>
+                            <constraint firstItem="h3X-6j-VPS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jnD-Lu-ajz"/>
+                            <constraint firstItem="h3X-6j-VPS" firstAttribute="baseline" secondItem="mAn-WU-BpJ" secondAttribute="firstBaseline" id="lai-qI-1kj"/>
+                            <constraint firstItem="pBl-38-ptp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mKS-wk-eBz"/>
+                            <constraint firstItem="mAn-WU-BpJ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="240/1024" id="puF-Y6-oZ1"/>
+                            <constraint firstItem="px7-kQ-elO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qgJ-qO-YKM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="yourFortune" destination="h3X-6j-VPS" id="767-bh-hzD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.6875" y="132.421875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="402" height="227"/>
+        <image name="Button" width="380" height="85"/>
+        <image name="ButtonPressed" width="380" height="85"/>
+        <image name="OldMan" width="692" height="1024"/>
+    </resources>
+</document>
