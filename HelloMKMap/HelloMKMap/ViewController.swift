@@ -18,40 +18,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         /*
-        let latitude: CLLocationDegrees = 1.2847052
-        let longtitude: CLLocationDegrees = 103.8377355
-        let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
-        let xScale: CLLocationDegrees = 0.01
-        let yScale: CLLocationDegrees = 0.01
-        let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: yScale, longitudeDelta: xScale)
-        let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
+         let latitude: CLLocationDegrees = 1.2847052
+         let longtitude: CLLocationDegrees = 103.8377355
+         let location: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: latitude, longitude: longtitude)
+         let xScale: CLLocationDegrees = 0.01
+         let yScale: CLLocationDegrees = 0.01
+         let span: MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: yScale, longitudeDelta: xScale)
+         let region: MKCoordinateRegion = MKCoordinateRegion(center: location, span: span)
 
-        map.setRegion(region, animated: true)
-        //        map.mapType = .satellite
- */
-
-        /*
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "Pearl Park"
-        annotation.subtitle = "I was there ...."
-
-        map.addAnnotation(annotation)
-*/
+         map.setRegion(region, animated: true)
+         //        map.mapType = .satellite
+         */
 
         /*
-        // get user location
-        locationManager = CLLocationManager()
-        locationManager?.requestWhenInUseAuthorization()
-        if let coordination = locationManager?.location?.coordinate {
-            let xScale:CLLocationDegrees = 0.005
-            let yScale:CLLocationDegrees = 0.005
-            let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: yScale, longitudeDelta: xScale)
-            let region = MKCoordinateRegion(center: coordination,span: span)
-            map.setRegion(region, animated: true)
-        }
-*/
-        
+         let annotation = MKPointAnnotation()
+         annotation.coordinate = location
+         annotation.title = "Pearl Park"
+         annotation.subtitle = "I was there ...."
+
+         map.addAnnotation(annotation)
+         */
+
+        /*
+         // get user location
+         locationManager = CLLocationManager()
+         locationManager?.requestWhenInUseAuthorization()
+         if let coordination = locationManager?.location?.coordinate {
+             let xScale:CLLocationDegrees = 0.005
+             let yScale:CLLocationDegrees = 0.005
+             let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: yScale, longitudeDelta: xScale)
+             let region = MKCoordinateRegion(center: coordination,span: span)
+             map.setRegion(region, animated: true)
+         }
+         */
+
         locationManager = CLLocationManager()
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.delegate = self

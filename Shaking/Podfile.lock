@@ -1,0 +1,20 @@
+PODS:
+  - JSONParserSwift (1.1.4)
+  - "UIView+Shake (1.4.0)"
+
+DEPENDENCIES:
+  - JSONParserSwift
+  - "UIView+Shake"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JSONParserSwift
+    - "UIView+Shake"
+
+SPEC CHECKSUMS:
+  JSONParserSwift: fff6c8aee929431cfbb10d016e9b92f06f732057
+  "UIView+Shake": 055ad67721de1f74d29c0a1d464697e505dfc62f
+
+PODFILE CHECKSUM: 8d7e59483bcb9e7d06ed4d8b4fb6b0c182cc8d90
+
+COCOAPODS: 1.7.5

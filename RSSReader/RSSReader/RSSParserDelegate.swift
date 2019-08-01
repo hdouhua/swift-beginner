@@ -43,8 +43,8 @@ class RSSParserDelegate: NSObject, XMLParserDelegate {
             currentElementValue = currentElementValue! + string
         }
     }
-    
-    func getResults () -> [NewsItem] {
+
+    func getResults() -> [NewsItem] {
         return resultsArray
     }
 }

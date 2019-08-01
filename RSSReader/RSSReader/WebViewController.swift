@@ -18,6 +18,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         myWebView.navigationDelegate = self
+        myIndicator.hidesWhenStopped = true
 
         if let okLink = linkFromOne, let okURL = URL(string: okLink) {
             let request = URLRequest(url: okURL)
