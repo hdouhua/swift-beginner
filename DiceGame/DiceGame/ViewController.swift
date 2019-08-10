@@ -6,6 +6,7 @@
 //  Copyright © 2019 Yilin. All rights reserved.
 //
 
+import AudioToolbox
 import UIKit
 
 class ViewController: UIViewController {
@@ -23,6 +24,8 @@ class ViewController: UIViewController {
         let num1 = arc4random_uniform(count) + 1
         let num2 = arc4random_uniform(count) + 1
 
+        AudioServicesPlaySystemSound(1111)
+        
         leftDiceImage.image = UIImage(named: "Dice\(num1)")
         rightDiceImage.image = UIImage(named: "Dice\(num2)")
     }

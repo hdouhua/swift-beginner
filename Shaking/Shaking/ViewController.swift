@@ -10,17 +10,11 @@ import UIKit
 import UIView_Shake
 
 class ViewController: UIViewController {
-
-    @IBAction func shake(_ sender: UIButton) {
-        self.view.shake()
+    @IBAction func shake(_: UIButton) {
+        view.shake()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     }
-
-
 }
-
