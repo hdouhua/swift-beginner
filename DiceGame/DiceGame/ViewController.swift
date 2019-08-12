@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let num2 = arc4random_uniform(count) + 1
 
         AudioServicesPlaySystemSound(1111)
-        
+
         leftDiceImage.image = UIImage(named: "Dice\(num1)")
         rightDiceImage.image = UIImage(named: "Dice\(num2)")
     }
