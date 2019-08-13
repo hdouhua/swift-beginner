@@ -1,5 +1,3 @@
-
-
 let helloClosure = {
     print("hello everybody")
 }

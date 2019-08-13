@@ -1,4 +1,3 @@
-
 struct SizeStruct {
     var width: Float = 5.0
     var height: Float = 8.0

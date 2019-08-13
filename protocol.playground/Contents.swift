@@ -1,4 +1,3 @@
-
 protocol SoyMilkGetable {
     func giveMeSoyMilk()
 }
