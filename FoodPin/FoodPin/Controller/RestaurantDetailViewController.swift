@@ -61,7 +61,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 3
+        return 5
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +83,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.selectionStyle = .none
 
             return cell
+
         case 2:
             // description
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailTextCell", for: indexPath) as! RestaurantDetailTextCell
@@ -90,18 +91,39 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.selectionStyle = .none
 
             return cell
+
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailMapTitleCell", for: indexPath) as! RestaurantDetailSeparatorCell
+            cell.titleLabel.text = "HOW TO GET HERE"
+            cell.selectionStyle = .none
+
+            return cell
+
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "detailMapCell", for: indexPath) as! RestaurantDetailMapCell
+            if let location = restaurant?.location {
+                cell.configure(location: location)
+            }
+            cell.selectionStyle = .none
+
+            return cell
+
         default:
             fatalError("Failed to instantiate the table view cell for detail view controller")
         }
     }
 
-    /*
-     // MARK: - Navigation
+    // MARK: - Navigation
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-     }
-     */
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender _: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+
+        if segue.identifier == "showMap" {
+            if let dvc = segue.destination as? RestaurantMapViewController {
+                dvc.restaurant = restaurant
+            }
+        }
+    }
 }
