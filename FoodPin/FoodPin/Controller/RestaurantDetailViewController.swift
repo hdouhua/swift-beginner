@@ -14,6 +14,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 
     var restaurant: Restaurant?
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +43,6 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.tintColor = .white
-//        navigationController?.hidesBarsOnSwipe = false
 
         tableView.contentInsetAdjustmentBehavior = .never
     }

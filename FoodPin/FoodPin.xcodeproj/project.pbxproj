@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1FB1B12302F228005B1FFC /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5252302712D00E9224D /* Rubik-Black.ttf */; };
+		3B1FB1B22302F228005B1FFC /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5242302712C00E9224D /* Rubik-BlackItalic.ttf */; };
+		3B1FB1B32302F228005B1FFC /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5222302712C00E9224D /* Rubik-Bold.ttf */; };
+		3B1FB1B42302F228005B1FFC /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5212302712C00E9224D /* Rubik-BoldItalic.ttf */; };
+		3B1FB1B52302F228005B1FFC /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5232302712C00E9224D /* Rubik-Light.ttf */; };
+		3B1FB1B62302F228005B1FFC /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5202302712C00E9224D /* Rubik-LightItalic.ttf */; };
+		3B1FB1B72302F228005B1FFC /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF51E2302712C00E9224D /* Rubik-Medium.ttf */; };
+		3B1FB1B82302F228005B1FFC /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF51D2302712C00E9224D /* Rubik-MediumItalic.ttf */; };
+		3B1FB1B92302F228005B1FFC /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF51F2302712C00E9224D /* Rubik-Regular.ttf */; };
+		3B1FB1BA2302F228005B1FFC /* Rubik-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5262302712D00E9224D /* Rubik-RegularItalic.ttf */; };
 		3B4B2F9D23004BE500825440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4B2F9C23004BE500825440 /* AppDelegate.swift */; };
 		3B4B2FA223004BE500825440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B4B2FA023004BE500825440 /* Main.storyboard */; };
 		3B4B2FA423004BE700825440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B4B2FA323004BE700825440 /* Assets.xcassets */; };
@@ -222,9 +232,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1FB1B22302F228005B1FFC /* Rubik-BlackItalic.ttf in Resources */,
+				3B1FB1B92302F228005B1FFC /* Rubik-Regular.ttf in Resources */,
+				3B1FB1B32302F228005B1FFC /* Rubik-Bold.ttf in Resources */,
+				3B1FB1BA2302F228005B1FFC /* Rubik-RegularItalic.ttf in Resources */,
 				3B4B2FA723004BE700825440 /* LaunchScreen.storyboard in Resources */,
+				3B1FB1B62302F228005B1FFC /* Rubik-LightItalic.ttf in Resources */,
 				3B4B2FA423004BE700825440 /* Assets.xcassets in Resources */,
+				3B1FB1B12302F228005B1FFC /* Rubik-Black.ttf in Resources */,
+				3B1FB1B52302F228005B1FFC /* Rubik-Light.ttf in Resources */,
+				3B1FB1B42302F228005B1FFC /* Rubik-BoldItalic.ttf in Resources */,
 				3B4B2FA223004BE500825440 /* Main.storyboard in Resources */,
+				3B1FB1B82302F228005B1FFC /* Rubik-MediumItalic.ttf in Resources */,
+				3B1FB1B72302F228005B1FFC /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

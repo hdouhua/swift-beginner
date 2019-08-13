@@ -51,7 +51,6 @@ class RestaurantTableViewController: UITableViewController {
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
         }
-//        navigationController?.hidesBarsOnSwipe = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -89,37 +88,22 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     override func tableView(_: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//        let isChecked = restaurants[indexPath.row].isVisited
-//
-//        let checkAction = UIContextualAction(style: .normal, title: isChecked ? "Undo" : "Check") { _, _, completionHandler in
-//
-//            if let cell = self.tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell {
-//                cell.checkImageView.isHidden = isChecked
-//
-//                self.restaurants[indexPath.row].isVisited = !isChecked
-//            }
-//
-//            // 呼叫完成處理器來解除動作按鈕
-//            completionHandler(true)
-//        }
-//
-//        checkAction.backgroundColor = UIColor(red: 46, green: 204, blue: 113)
-//        checkAction.image = UIImage(named: isChecked ? "undo" : "tick")
-//
-//        let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkAction])
+        let isChecked = restaurants[indexPath.row].isVisited
 
-        let checkInAction = UIContextualAction(style: .normal, title: "Check-in") { _, _, completionHandler in
+        let checkInAction = UIContextualAction(style: .normal, title: isChecked ? "Undo" : "Check") { _, _, completionHandler in
 
-            let cell = self.tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
-            self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
-            cell.checkImageView.isHidden = self.restaurants[indexPath.row].isVisited ? false : true
+            if let cell = self.tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell {
+                cell.checkImageView.isHidden = isChecked
 
+                self.restaurants[indexPath.row].isVisited = !isChecked
+            }
+
+            // 呼叫完成處理器來解除動作按鈕
             completionHandler(true)
         }
 
-        let checkInIcon = restaurants[indexPath.row].isVisited ? "undo" : "tick"
-        checkInAction.backgroundColor = UIColor(red: 38, green: 162, blue: 78)
-        checkInAction.image = UIImage(named: checkInIcon)
+        checkInAction.backgroundColor = UIColor(red: 46, green: 204, blue: 113)
+        checkInAction.image = UIImage(named: isChecked ? "undo" : "tick")
 
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkInAction])
 
@@ -128,12 +112,10 @@ class RestaurantTableViewController: UITableViewController {
 
     override func tableView(_: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
-            // 從資料源刪除列
-            self.restaurants.remove(at: indexPath.row)
 
+            self.restaurants.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
 
-            // 呼叫完成處理器來解除動作按鈕
             completionHandler(true)
         }
 
