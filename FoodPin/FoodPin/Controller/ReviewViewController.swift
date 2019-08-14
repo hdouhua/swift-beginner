@@ -19,8 +19,9 @@ class ReviewViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        if restaurant != nil {
-            backgroundImageView.image = UIImage(named: restaurant!.image)
+
+        if let imageData = restaurant?.image {
+            backgroundImageView.image = UIImage(data: imageData)
         }
 
         // blur effect

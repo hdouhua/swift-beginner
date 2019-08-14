@@ -14,6 +14,20 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 
     var restaurant: Restaurant?
 
+    func displayDetail() {
+        if restaurant != nil {
+            if let imageData = restaurant!.image {
+                headerView.headerImageView.image = UIImage(data: imageData)
+            }
+            headerView.nameLabel.text = restaurant!.name
+            headerView.typeLabel.text = restaurant!.type
+            headerView.heartImageView.isHidden = !restaurant!.isVisited
+            if restaurant!.rating != nil, restaurant!.rating != "" {
+                headerView.ratingImageView.image = UIImage(named: restaurant!.rating!)
+            }
+        }
+    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -25,15 +39,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
 
         navigationItem.largeTitleDisplayMode = .never
 
-        if restaurant != nil {
-            headerView.headerImageView.image = UIImage(named: restaurant!.image)
-            headerView.nameLabel.text = restaurant!.name
-            headerView.typeLabel.text = restaurant!.type
-            headerView.heartImageView.isHidden = !restaurant!.isVisited
-            if restaurant!.rating != "" {
-                headerView.ratingImageView.image = UIImage(named: restaurant!.rating)
-            }
-        }
+        displayDetail()
 
         // Set the table view's delegate and data source
         tableView.delegate = self
@@ -90,7 +96,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         case 2:
             // description
             let cell = tableView.dequeueReusableCell(withIdentifier: "detailTextCell", for: indexPath) as! RestaurantDetailTextCell
-            cell.descriptionLabel.text = restaurant?.description
+            cell.descriptionLabel.text = restaurant?.summary
             cell.selectionStyle = .none
 
             return cell
@@ -139,6 +145,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             if let rating = segue.identifier {
                 self.restaurant?.rating = rating
                 self.headerView.ratingImageView.image = UIImage(named: rating)
+
+                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                    appDelegate.saveContext()
+                }
 
                 // addtional animation
                 let scaleTransform = CGAffineTransform(scaleX: 0.1, y: 0.1)
