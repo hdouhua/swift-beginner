@@ -30,6 +30,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             headerView.nameLabel.text = restaurant!.name
             headerView.typeLabel.text = restaurant!.type
             headerView.heartImageView.isHidden = !restaurant!.isVisited
+            if restaurant!.rating != "" {
+                headerView.ratingImageView.image = UIImage(named: restaurant!.rating)
+            }
         }
 
         // Set the table view's delegate and data source
@@ -124,6 +127,33 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             if let dvc = segue.destination as? RestaurantMapViewController {
                 dvc.restaurant = restaurant
             }
+        } else if segue.identifier == "showReview" {
+            if let dvc = segue.destination as? ReviewViewController {
+                dvc.restaurant = restaurant
+            }
         }
+    }
+
+    @IBAction func rateRestaurant(segue: UIStoryboardSegue) {
+        dismiss(animated: true) {
+            if let rating = segue.identifier {
+                self.restaurant?.rating = rating
+                self.headerView.ratingImageView.image = UIImage(named: rating)
+
+                // addtional animation
+                let scaleTransform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                self.headerView.ratingImageView.transform = scaleTransform
+                self.headerView.ratingImageView.alpha = 0
+
+                UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.7, options: [], animations: {
+                    self.headerView.ratingImageView.transform = .identity
+                    self.headerView.ratingImageView.alpha = 1.0
+                })
+            }
+        }
+    }
+
+    @IBAction func close(segue _: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -48,8 +48,11 @@ class RestaurantTableViewController: UITableViewController {
         // Customize the navigation bar
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
+        if let customFont = UIFont(name: "Rubik-Medium", size: 35.0) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [
+                NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60),
+                NSAttributedString.Key.font: customFont,
+            ]
         }
     }
 
@@ -206,5 +209,9 @@ class RestaurantTableViewController: UITableViewController {
                 }
             }
         }
+    }
+
+    @IBAction func unwindToHome(_: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
     }
 }

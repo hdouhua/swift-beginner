@@ -27,10 +27,9 @@ class RestaurantDetailMapCell: UITableViewCell {
         // 取得位置
         let geoCoder = CLGeocoder()
 
-        print(location)
         geoCoder.geocodeAddressString(location, completionHandler: { placemarks, error in
             if let error = error {
-                print(error.localizedDescription)
+                print(print("failed to get GeoCoder: \(error.localizedDescription)"))
                 return
             }
 
