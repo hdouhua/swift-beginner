@@ -9,11 +9,32 @@
 import CoreData
 import UIKit
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     @IBOutlet var emptyRestaurantView: UIView!
+    @IBOutlet var importBarButton: UIBarButtonItem!
 
-    var restaurants: [Restaurant] = [
-    ]
+    var searchController: UISearchController!
+
+    var restaurants: [Restaurant] = []
+    var searchResults: [Restaurant] = []
+
+    // MARK: - Search
+
+    func filterContent(for searchText: String) {
+        searchResults = restaurants.filter { (restaurant) -> Bool in
+            if let name = restaurant.name {
+                return name.localizedStandardContains(searchText)
+            }
+            return false
+        }
+    }
+
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
+    }
 
     // MARK: - NSFetchedResultsControllerDelegate
 
@@ -84,6 +105,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
         fetchRestaurants()
 
+        importBarButton.isEnabled = !(restaurants.count > 0)
+
         tableView.backgroundView = emptyRestaurantView
 
         tableView.cellLayoutMarginsFollowReadableWidth = true
@@ -98,12 +121,30 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                 NSAttributedString.Key.font: customFont,
             ]
         }
+
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.tintColor = .white
+//        navigationItem.searchController = searchController
+        tableView.tableHeaderView = searchController.searchBar
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         navigationController?.hidesBarsOnSwipe = true
+    }
+
+    override func viewDidAppear(_: Bool) {
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
     }
 
     // MARK: - Table view data source
@@ -123,13 +164,18 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurants.count
+        if searchController.isActive {
+            return searchResults.count
+        } else {
+            return restaurants.count
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "datacell"
         if let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? RestaurantTableViewCell {
-            let restaurant = restaurants[indexPath.row]
+            let restaurant = searchController.isActive ? searchResults[indexPath.row] : restaurants[indexPath.row]
+
             cell.nameLabel.text = restaurant.name
             if let imageData = restaurant.image {
                 cell.thumbnailImageView.image = UIImage(data: imageData)
@@ -145,14 +191,15 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
 
     override func tableView(_: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let isChecked = restaurants[indexPath.row].isVisited
+        let items = searchController.isActive ? searchResults : restaurants
+        let isChecked = items[indexPath.row].isVisited
 
         let checkInAction = UIContextualAction(style: .normal, title: isChecked ? "Undo" : "Check") { _, _, completionHandler in
 
             if let cell = self.tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell {
                 cell.checkImageView.isHidden = isChecked
 
-                self.restaurants[indexPath.row].isVisited = !isChecked
+                items[indexPath.row].isVisited = !isChecked
             }
 
             // 呼叫完成處理器來解除動作按鈕
@@ -169,19 +216,27 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
     override func tableView(_: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                let context = appDelegate.persistentContainer.viewContext
+                let restaurantToDelete = self.fetchResultController.object(at: indexPath)
+                context.delete(restaurantToDelete)
 
-            self.restaurants.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .fade)
+                appDelegate.saveContext()
+            } else {
+                self.restaurants.remove(at: indexPath.row)
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+            }
 
             completionHandler(true)
         }
 
         let shareAction = UIContextualAction(style: .normal, title: "Share") { _, _, completionHandler in
-            let defaultText = "Just checking in at " + self.restaurants[indexPath.row].name!
+            let items = self.searchController.isActive ? self.searchResults : self.restaurants
+            let defaultText = "Just checking in at " + items[indexPath.row].name!
 
             let activityController: UIActivityViewController
 
-            if let imageData = self.restaurants[indexPath.row].image {
+            if let imageData = items[indexPath.row].image {
                 let imageToShare = UIImage(data: imageData)
                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare!], applicationActivities: nil)
             } else {
@@ -260,7 +315,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 if let dvc = segue.destination as? RestaurantDetailViewController {
-                    dvc.restaurant = restaurants[indexPath.row]
+                    dvc.restaurant = searchController.isActive ? searchResults[indexPath.row] : restaurants[indexPath.row]
                 }
             }
         }
@@ -268,5 +323,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
     @IBAction func unwindToHome(_: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func importAction(_: UIBarButtonItem) {
+        importData()
     }
 }

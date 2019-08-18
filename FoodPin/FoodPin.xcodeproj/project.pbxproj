@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1E95A5230586ED0031FD88 /* RestaurantTableViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E95A4230586ED0031FD88 /* RestaurantTableViewController+Ext.swift */; };
+		3B1E95C72307E0C50031FD88 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E95C62307E0C50031FD88 /* WalkthroughPageViewController.swift */; };
+		3B1E95C92307ECF40031FD88 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E95C82307ECF40031FD88 /* WalkthroughContentViewController.swift */; };
+		3B1E95CB2307F1790031FD88 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E95CA2307F1790031FD88 /* WalkthroughViewController.swift */; };
+		3B1E95D4230930BF0031FD88 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E95D2230930BF0031FD88 /* Discover.storyboard */; };
+		3B1E95D7230930FA0031FD88 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E95D5230930FA0031FD88 /* Onboarding.storyboard */; };
+		3B1E95DA230931220031FD88 /* New.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E95D8230931220031FD88 /* New.storyboard */; };
+		3B1E95E3230938330031FD88 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B1E95E1230938330031FD88 /* About.storyboard */; };
+		3B1E95E523096A4E0031FD88 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E95E423096A4E0031FD88 /* AboutTableViewController.swift */; };
+		3B1E95E723096FB80031FD88 /* RateUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1E95E623096FB80031FD88 /* RateUsViewController.swift */; };
 		3B1FB1B12302F228005B1FFC /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5252302712D00E9224D /* Rubik-Black.ttf */; };
 		3B1FB1B22302F228005B1FFC /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5242302712C00E9224D /* Rubik-BlackItalic.ttf */; };
 		3B1FB1B32302F228005B1FFC /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEDCF5222302712C00E9224D /* Rubik-Bold.ttf */; };
@@ -40,6 +50,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B1E95A4230586ED0031FD88 /* RestaurantTableViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantTableViewController+Ext.swift"; sourceTree = "<group>"; };
+		3B1E95C62307E0C50031FD88 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		3B1E95C82307ECF40031FD88 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		3B1E95CA2307F1790031FD88 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		3B1E95D3230930BF0031FD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		3B1E95D6230930FA0031FD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
+		3B1E95D9230931220031FD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/New.storyboard; sourceTree = "<group>"; };
+		3B1E95E2230938330031FD88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		3B1E95E423096A4E0031FD88 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		3B1E95E623096FB80031FD88 /* RateUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateUsViewController.swift; sourceTree = "<group>"; };
 		3B1FB1BC23030B1B005B1FFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3B1FB1BE230310F6005B1FFC /* RestaurantDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeparatorCell.swift; sourceTree = "<group>"; };
 		3B1FB1C02303111D005B1FFC /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
@@ -149,6 +169,11 @@
 				3B1FB1C223031A69005B1FFC /* RestaurantMapViewController.swift */,
 				CEDCF5332303C26500E9224D /* ReviewViewController.swift */,
 				CEDCF535230408D400E9224D /* NewRestaurantController.swift */,
+				3B1E95C62307E0C50031FD88 /* WalkthroughPageViewController.swift */,
+				3B1E95C82307ECF40031FD88 /* WalkthroughContentViewController.swift */,
+				3B1E95CA2307F1790031FD88 /* WalkthroughViewController.swift */,
+				3B1E95E423096A4E0031FD88 /* AboutTableViewController.swift */,
+				3B1E95E623096FB80031FD88 /* RateUsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,8 +189,12 @@
 		CEDCF5162302666500E9224D /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				3B1E95E1230938330031FD88 /* About.storyboard */,
+				3B1E95D8230931220031FD88 /* New.storyboard */,
+				3B1E95D2230930BF0031FD88 /* Discover.storyboard */,
 				3B4B2FA023004BE500825440 /* Main.storyboard */,
 				3B4B2FA523004BE700825440 /* LaunchScreen.storyboard */,
+				3B1E95D5230930FA0031FD88 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -200,6 +229,7 @@
 			children = (
 				CEDCF52E2302B64B00E9224D /* UIColor+Ext.swift */,
 				CEDCF5302302B7C200E9224D /* UINavigationController+Ext.swift */,
+				3B1E95A4230586ED0031FD88 /* RestaurantTableViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,14 +301,18 @@
 				3B1FB1B92302F228005B1FFC /* Rubik-Regular.ttf in Resources */,
 				3B1FB1B32302F228005B1FFC /* Rubik-Bold.ttf in Resources */,
 				3B1FB1BA2302F228005B1FFC /* Rubik-RegularItalic.ttf in Resources */,
+				3B1E95E3230938330031FD88 /* About.storyboard in Resources */,
 				3B4B2FA723004BE700825440 /* LaunchScreen.storyboard in Resources */,
+				3B1E95DA230931220031FD88 /* New.storyboard in Resources */,
 				3B1FB1B62302F228005B1FFC /* Rubik-LightItalic.ttf in Resources */,
 				3B4B2FA423004BE700825440 /* Assets.xcassets in Resources */,
 				3B1FB1B12302F228005B1FFC /* Rubik-Black.ttf in Resources */,
+				3B1E95D4230930BF0031FD88 /* Discover.storyboard in Resources */,
 				3B1FB1B52302F228005B1FFC /* Rubik-Light.ttf in Resources */,
 				3B1FB1B42302F228005B1FFC /* Rubik-BoldItalic.ttf in Resources */,
 				3B4B2FA223004BE500825440 /* Main.storyboard in Resources */,
 				3B1FB1B82302F228005B1FFC /* Rubik-MediumItalic.ttf in Resources */,
+				3B1E95D7230930FA0031FD88 /* Onboarding.storyboard in Resources */,
 				3B1FB1B72302F228005B1FFC /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B1E95C72307E0C50031FD88 /* WalkthroughPageViewController.swift in Sources */,
 				CEDCF52823027FE300E9224D /* RestaurantDetailHeaderView.swift in Sources */,
 				CEDCF5342303C26500E9224D /* ReviewViewController.swift in Sources */,
 				3B1FB1C12303111D005B1FFC /* RestaurantDetailMapCell.swift in Sources */,
@@ -298,11 +333,16 @@
 				CEDCF51A23026A6500E9224D /* RestaurantDetailViewController.swift in Sources */,
 				3B1FB1ED230451D5005B1FFC /* FoodPin.xcdatamodeld in Sources */,
 				3B1FB1C323031A69005B1FFC /* RestaurantMapViewController.swift in Sources */,
+				3B1E95CB2307F1790031FD88 /* WalkthroughViewController.swift in Sources */,
+				3B1E95A5230586ED0031FD88 /* RestaurantTableViewController+Ext.swift in Sources */,
+				3B1E95E523096A4E0031FD88 /* AboutTableViewController.swift in Sources */,
 				CEDCF52A23028F2600E9224D /* RestaurantDetailIconTextCell.swift in Sources */,
 				CEDCF5312302B7C200E9224D /* UINavigationController+Ext.swift in Sources */,
+				3B1E95C92307ECF40031FD88 /* WalkthroughContentViewController.swift in Sources */,
 				CEDCF536230408D400E9224D /* NewRestaurantController.swift in Sources */,
 				CEDCF53823040D2500E9224D /* RoundedTextField.swift in Sources */,
 				CEDCF52F2302B64B00E9224D /* UIColor+Ext.swift in Sources */,
+				3B1E95E723096FB80031FD88 /* RateUsViewController.swift in Sources */,
 				3B4B2FB1230054E400825440 /* RestaurantTableViewCell.swift in Sources */,
 				3B1FB1BF230310F6005B1FFC /* RestaurantDetailSeparatorCell.swift in Sources */,
 				3B4B2F9D23004BE500825440 /* AppDelegate.swift in Sources */,
@@ -312,6 +352,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		3B1E95D2230930BF0031FD88 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E95D3230930BF0031FD88 /* Base */,
+			);
+			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1E95D5230930FA0031FD88 /* Onboarding.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E95D6230930FA0031FD88 /* Base */,
+			);
+			name = Onboarding.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1E95D8230931220031FD88 /* New.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E95D9230931220031FD88 /* Base */,
+			);
+			name = New.storyboard;
+			sourceTree = "<group>";
+		};
+		3B1E95E1230938330031FD88 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B1E95E2230938330031FD88 /* Base */,
+			);
+			name = About.storyboard;
+			sourceTree = "<group>";
+		};
 		3B4B2FA023004BE500825440 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

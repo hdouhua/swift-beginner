@@ -16,9 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
+        // customize navigation bar
         let backButtonImage = UIImage(named: "back")
         UINavigationBar.appearance().backIndicatorImage = backButtonImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
+
+        // custmize tab bar
+        UITabBar.appearance().tintColor = UIColor(red: 231, green: 76, blue: 60)
+        UITabBar.appearance().barTintColor = UIColor.white
 
         return true
     }
