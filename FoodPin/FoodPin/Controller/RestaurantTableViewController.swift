@@ -215,7 +215,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
 
     override func tableView(_: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, completionHandler in
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "Delete")) { _, _, completionHandler in
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 let context = appDelegate.persistentContainer.viewContext
                 let restaurantToDelete = self.fetchResultController.object(at: indexPath)
@@ -230,7 +230,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             completionHandler(true)
         }
 
-        let shareAction = UIContextualAction(style: .normal, title: "Share") { _, _, completionHandler in
+        let shareAction = UIContextualAction(style: .normal, title: NSLocalizedString("Share", comment: "Share")) { _, _, completionHandler in
             let items = self.searchController.isActive ? self.searchResults : self.restaurants
             let defaultText = "Just checking in at " + items[indexPath.row].name!
 

@@ -1,0 +1,12 @@
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "3Fm-rF-zDI"; */
+"3Fm-rF-zDI.normalTitle" = "下一步";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "5fi-D0-k8t"; */
+"5fi-D0-k8t.normalTitle" = "跳过";
+
+/* Class = "UILabel"; text = "HEADING"; ObjectID = "iw9-9V-pK3"; */
+"iw9-9V-pK3.text" = "HEADING";
+
+/* Class = "UILabel"; text = "Subheading"; ObjectID = "ReF-Nf-0ec"; */
+"ReF-Nf-0ec.text" = "Subheading";
+

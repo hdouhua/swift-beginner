@@ -1,0 +1,63 @@
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "3MR-zk-Q3l"; */
+"3MR-zk-Q3l.title" = " ";
+
+/* Class = "UITabBarItem"; title = "Discover"; ObjectID = "5h9-My-QcW"; */
+"5h9-My-QcW.title" = "关于";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "6Q1-OX-emc"; */
+"6Q1-OX-emc.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Rate it"; ObjectID = "8FG-Ye-ELM"; */
+"8FG-Ye-ELM.normalTitle" = "评价";
+
+/* Class = "UIButton"; normalTitle = "Cool"; ObjectID = "75U-HA-Ojs"; */
+"75U-HA-Ojs.normalTitle" = "酷";
+
+/* Class = "UINavigationItem"; title = "Food Pin"; ObjectID = "A02-Fh-icX"; */
+"A02-Fh-icX.title" = "Food Pin";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "ayR-ea-KuT"; */
+"ayR-ea-KuT.title" = "收藏";
+
+/* Class = "UIButton"; normalTitle = "Sad"; ObjectID = "CEH-Ki-zO0"; */
+"CEH-Ki-zO0.normalTitle" = "难过";
+
+/* Class = "UIButton"; normalTitle = "Love"; ObjectID = "fbB-ag-YP7"; */
+"fbB-ag-YP7.normalTitle" = "喜欢";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HsS-Se-MRo"; */
+"HsS-Se-MRo.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "hYL-dK-LDh"; */
+"hYL-dK-LDh.text" = "Name";
+
+/* Class = "UIBarButtonItem"; title = "Import"; ObjectID = "K8T-L8-8vT"; */
+"K8T-L8-8vT.title" = "导入";
+
+/* Class = "UIBarButtonItem"; title = "PLUS"; ObjectID = "kLB-gn-LNL"; */
+"kLB-gn-LNL.title" = "PLUS";
+
+/* Class = "UIButton"; normalTitle = "Angry"; ObjectID = "KtZ-e0-Ew2"; */
+"KtZ-e0-Ew2.normalTitle" = "生气";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lAU-Lq-oCS"; */
+"lAU-Lq-oCS.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nAq-lz-TvD"; */
+"nAq-lz-TvD.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "nd9-o3-pGQ"; */
+"nd9-o3-pGQ.title" = "关于";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "P5b-de-gXa"; */
+"P5b-de-gXa.text" = "定位";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "pVB-SJ-iPv"; */
+"pVB-SJ-iPv.text" = "类型";
+
+/* Class = "UIButton"; normalTitle = "Happy"; ObjectID = "r1a-ve-0cP"; */
+"r1a-ve-0cP.normalTitle" = "幸福";
+
+/* Class = "UILabel"; text = "Subsection Title"; ObjectID = "YkT-DT-hXE"; */
+"YkT-DT-hXE.text" = "Subsection Title";
+

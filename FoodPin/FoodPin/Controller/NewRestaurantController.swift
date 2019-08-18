@@ -107,7 +107,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
 
             let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
 
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: "Camera"), style: .default, handler: { _ in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = false
@@ -118,7 +118,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                 }
             })
 
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { _ in
+            let photoLibraryAction = UIAlertAction(title: NSLocalizedString("Photo Library", comment: "Photo Library"), style: .default, handler: { _ in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
                     imagePicker.allowsEditing = false

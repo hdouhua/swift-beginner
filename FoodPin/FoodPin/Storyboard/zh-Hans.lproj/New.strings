@@ -1,0 +1,33 @@
+/* Class = "UITextField"; placeholder = "Fill in the restaurant type"; ObjectID = "1xo-OE-dJj"; */
+"1xo-OE-dJj.placeholder" = "填写餐馆类型";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant address"; ObjectID = "5Q6-B7-e6O"; */
+"5Q6-B7-e6O.placeholder" = "填写餐馆地址";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "23M-qY-dC1"; */
+"23M-qY-dC1.text" = "名称";
+
+/* Class = "UITextView"; text = "A great restaurant to try out"; ObjectID = "BjO-4F-7yj"; */
+"BjO-4F-7yj.text" = "A great restaurant to try out";
+
+/* Class = "UILabel"; text = "DESCRIPTION"; ObjectID = "C9T-em-41e"; */
+"C9T-em-41e.text" = "描述";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant name"; ObjectID = "hii-ZZ-TO7"; */
+"hii-ZZ-TO7.placeholder" = "填写餐馆名称";
+
+/* Class = "UILabel"; text = "PHONE"; ObjectID = "Ice-d5-Hhu"; */
+"Ice-d5-Hhu.text" = "电话";
+
+/* Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "lqJ-Px-kIA"; */
+"lqJ-Px-kIA.title" = "新餐馆";
+
+/* Class = "UILabel"; text = "ADDRESS"; ObjectID = "NyR-1h-uFt"; */
+"NyR-1h-uFt.text" = "地址";
+
+/* Class = "UILabel"; text = "TYPE"; ObjectID = "uzv-68-S8s"; */
+"uzv-68-S8s.text" = "类型";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant phone"; ObjectID = "Z9b-rx-vKu"; */
+"Z9b-rx-vKu.placeholder" = "填写餐馆电话";
+
